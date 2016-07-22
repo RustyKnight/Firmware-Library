@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol Responder {
-    public func send(response: ResponseCode, `for`: ResponseType, contents: [String: [String: AnyObject]]?)
+    func send(response: ResponseCode, `for`: ResponseType, contents: [String: [String: AnyObject]]?)
 }
