@@ -133,7 +133,7 @@ enum ProtocolError: ErrorProtocol {
         let buffer = UnsafeMutableBufferPointer<UInt8>(
             start: UnsafeMutablePointer<UInt8>(allocatingCapacity: data.count),
             count: data.count)
-        let count = data.copyBytes(to: buffer)
+        let _ = data.copyBytes(to: buffer)
         let headerBytes = Array(buffer)
         return getBodyLength(from: headerBytes)
     }
