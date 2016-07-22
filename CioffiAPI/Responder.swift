@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Responder {
-    func send(response: ResponseCode, `for`: ResponseType, contents: [String: [String: AnyObject]]?)
+public protocol Responder {
+    public func send(response: ResponseCode, `for`: ResponseType, contents: [String: [String: AnyObject]]?)
 }

@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-enum NotificationType: Int {
+public enum NotificationType: Int {
     case shutdownNotification = 3
     case networkRegistrationStatusNotification = 16
     case signalStrengthChangeNotification = 19
@@ -45,7 +45,7 @@ public class JSONResponseWrapper {
         return wrappedValue
     }
     
-    init(theValue: JSON) {
+    public init(theValue: JSON) {
         wrappedValue = theValue
     }
     
