@@ -17,6 +17,7 @@
 		7024ECCC1D420D22000BB8D7 /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024ECCB1D420D22000BB8D7 /* LogService.swift */; };
 		7024ECD01D42245A000BB8D7 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7024ECCE1D42245A000BB8D7 /* CocoaAsyncSocket.framework */; };
 		7024ECD11D42245A000BB8D7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7024ECCF1D42245A000BB8D7 /* SwiftyJSON.framework */; };
+		707CC9FF1D422991003D8292 /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707CC9FE1D422991003D8292 /* Responder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		7024ECCB1D420D22000BB8D7 /* LogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
 		7024ECCE1D42245A000BB8D7 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		7024ECCF1D42245A000BB8D7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
+		707CC9FE1D422991003D8292 /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +90,14 @@
 		7024ECAB1D420CEC000BB8D7 /* CioffiAPI */ = {
 			isa = PBXGroup;
 			children = (
-				7024ECCB1D420D22000BB8D7 /* LogService.swift */,
+				7024ECAC1D420CEC000BB8D7 /* CioffiAPI.h */,
 				7024ECC91D420D1C000BB8D7 /* DictionaryOperators.swift */,
+				7024ECAD1D420CEC000BB8D7 /* Info.plist */,
+				7024ECCB1D420D22000BB8D7 /* LogService.swift */,
 				7024ECC31D420D10000BB8D7 /* ProtocolUtilities.swift */,
 				7024ECC41D420D10000BB8D7 /* RequestUtilities.swift */,
+				707CC9FE1D422991003D8292 /* Responder.swift */,
 				7024ECC51D420D10000BB8D7 /* ResponseUtilities.swift */,
-				7024ECAC1D420CEC000BB8D7 /* CioffiAPI.h */,
-				7024ECAD1D420CEC000BB8D7 /* Info.plist */,
 			);
 			path = CioffiAPI;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				7024ECCC1D420D22000BB8D7 /* LogService.swift in Sources */,
 				7024ECC71D420D10000BB8D7 /* RequestUtilities.swift in Sources */,
+				707CC9FF1D422991003D8292 /* Responder.swift in Sources */,
 				7024ECCA1D420D1C000BB8D7 /* DictionaryOperators.swift in Sources */,
 				7024ECC81D420D10000BB8D7 /* ResponseUtilities.swift in Sources */,
 				7024ECC61D420D10000BB8D7 /* ProtocolUtilities.swift in Sources */,
@@ -443,6 +447,7 @@
 				7024ECBF1D420CEC000BB8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7024ECC01D420CEC000BB8D7 /* Build configuration list for PBXNativeTarget "CioffiAPITests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +456,7 @@
 				7024ECC21D420CEC000BB8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

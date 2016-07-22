@@ -142,32 +142,32 @@ enum ProtocolError: ErrorProtocol {
         return (UInt(headerBytes[2]) * 256) + UInt(headerBytes[3])
     }
     
-    class func processRequest(header: Data, body: Data, `for` client: Client) throws {
-        guard validCRC(fromHeader: header, body: body) else {
-            throw ProtocolError.invalidCRC
-        }
-        guard let _ = String(data: body, encoding: String.Encoding.isoLatin1) else {
-            throw ProtocolError.requestDecodingError
-        }
-        
-        log(info: "Request: \(body)")
-        
-        let json = JSON(data: body)
-        log(info: "json: \(json)")
-        guard let typeCode = json["header"]["type"].int else {
-            throw ProtocolError.missingRequestType
-        }
-        
-        let requestType = RequestType.for(typeCode)
-        log(info: "requestType: \(requestType)")
-        guard let handler = RequestHandlerRegistryManager.default.handler(for: requestType) else {
-            log(info: "No handler for request :(")
-            client.send(response: .unsupportedAPIType, for: .unknown, contents: nil)
-            return
-        }
-        handler.handle(request: json, for: client)
-    }
-    
+//    class func processRequest(header: Data, body: Data, `for` client: Client) throws {
+//        guard validCRC(fromHeader: header, body: body) else {
+//            throw ProtocolError.invalidCRC
+//        }
+//        guard let _ = String(data: body, encoding: String.Encoding.isoLatin1) else {
+//            throw ProtocolError.requestDecodingError
+//        }
+//        
+//        log(info: "Request: \(body)")
+//        
+//        let json = JSON(data: body)
+//        log(info: "json: \(json)")
+//        guard let typeCode = json["header"]["type"].int else {
+//            throw ProtocolError.missingRequestType
+//        }
+//        
+//        let requestType = RequestType.for(typeCode)
+//        log(info: "requestType: \(requestType)")
+//        guard let handler = RequestHandlerRegistryManager.default.handler(for: requestType) else {
+//            log(info: "No handler for request :(")
+//            client.send(response: .unsupportedAPIType, for: .unknown, contents: nil)
+//            return
+//        }
+//        handler.handle(request: json, for: client)
+//    }
+	
     class func validCRC(fromHeader headerData: Data, body bodyData: Data) -> Bool {
         
         // Compute CRC
