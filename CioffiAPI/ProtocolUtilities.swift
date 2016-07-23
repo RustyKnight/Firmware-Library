@@ -13,7 +13,7 @@ public enum ProtocolError: ErrorProtocol {
 	case jsonEncodingError
 	case dataEncodingError
 	case requestDecodingError
-	case invalidCRCƒgetHeader
+	case invalidCRC
 	case missingRequestType
 }
 
