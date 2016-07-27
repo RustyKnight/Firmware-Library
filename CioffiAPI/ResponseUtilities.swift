@@ -14,6 +14,7 @@ public enum NotificationType: Int {
 	case networkRegistrationStatusChanged = 16
 	case signalStrengthChanged = 19
 	case serviceProviderChanged = 22
+    case batteryStatusChanged = 25
 }
 
 
