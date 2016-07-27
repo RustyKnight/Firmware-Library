@@ -50,6 +50,7 @@ public enum ResponseCode: Int {
 	case unsupportedAPIVersion = 1
 	case unsupportedAPIType = 2
 	case failure = 3
+    case accessDenied = 4
 }
 
 public class JSONResponseWrapper {
