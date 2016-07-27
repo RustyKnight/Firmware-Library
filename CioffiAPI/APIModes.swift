@@ -34,3 +34,8 @@ public enum BatteryStatus: Int {
     case notCharging = 3
     case full = 4
 }
+
+public enum SignalStrengthMode: Int {
+    case satellite = 0
+    case cellular = 1
+}
