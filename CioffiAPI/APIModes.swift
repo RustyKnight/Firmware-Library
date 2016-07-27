@@ -26,3 +26,11 @@ public enum NetworkRegistrationStatus: Int {
     case registeredRoaming = 3
     case registrationDenied = 4
 }
+
+public enum BatteryStatus: Int {
+    case unknown = 0
+    case charging = 1
+    case discharging = 2
+    case notCharging = 3
+    case full = 4
+}

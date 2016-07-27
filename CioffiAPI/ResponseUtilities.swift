@@ -28,6 +28,7 @@ public enum ResponseType: Int {
 	case getNetworkRegistrationStatus = 15
 	case getSignalStrength = 18
 	case getServiceProviderName = 21
+    case getBatteryStatus = 24
 	
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
