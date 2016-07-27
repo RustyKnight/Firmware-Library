@@ -10,10 +10,10 @@ import Foundation
 import SwiftyJSON
 
 public enum NotificationType: Int {
-	case shutdownNotification = 3
-	case networkRegistrationStatusNotification = 16
-	case signalStrengthChangeNotification = 19
-	case serviceProviderChangeNotification = 22
+	case shutingdown = 3
+	case networkRegistrationStatusChanged = 16
+	case signalStrengthChanged = 19
+	case serviceProviderChanged = 22
 }
 
 
