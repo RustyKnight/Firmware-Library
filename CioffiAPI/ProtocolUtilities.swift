@@ -62,9 +62,11 @@ public enum ProtocolError: ErrorProtocol {
 	- requestType: Request Type
 	- Returns: Request header
 	*/
-	public static func header(forType type: Int, result: Int = ResponseCode.success.rawValue) -> [String: [String: AnyObject]] {
+	public static func header(forType type: Int, result: Int? = nil) -> [String: [String: AnyObject]] {
 		var header: [String: [String: AnyObject]] = ["header": ["version": apiVersion, "type" : type]]
-        header["header"]?["result"] = result
+        if let result = result {
+            header["header"]?["result"] = result
+        }
 		return header
 	}
 	
