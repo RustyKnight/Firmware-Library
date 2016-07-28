@@ -37,7 +37,7 @@ public enum ProtocolError: ErrorProtocol {
 	}
 	
 	public static func header(forNotification notification: NotificationType) -> [String: [String: AnyObject]] {
-		return header(forType: notification.rawValue)
+        return header(forType: notification.rawValue, result: ResponseCode.success.rawValue)
 	}
     
     public static func header(forRequest request: RequestType, code: ResponseCode) -> [String: [String: AnyObject]] {
@@ -62,11 +62,9 @@ public enum ProtocolError: ErrorProtocol {
 	- requestType: Request Type
 	- Returns: Request header
 	*/
-	public static func header(forType type: Int, result: Int? = nil) -> [String: [String: AnyObject]] {
+	public static func header(forType type: Int, result: Int = ResponseCode.success.rawValue) -> [String: [String: AnyObject]] {
 		var header: [String: [String: AnyObject]] = ["header": ["version": apiVersion, "type" : type]]
-		if let result = result {
-			header["header"]?["result"] = result
-		}
+        header["header"]?["result"] = result
 		return header
 	}
 	
