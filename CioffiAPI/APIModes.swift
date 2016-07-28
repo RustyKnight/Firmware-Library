@@ -39,3 +39,11 @@ public enum SignalStrengthMode: Int {
     case satellite = 0
     case cellular = 1
 }
+
+public enum SatelliteServiceMode: Int {
+    case unknown = -1
+    case voice = 0
+    case data = 1
+    case switchingToVoice = 2
+    case switchingToData = 3
+}
