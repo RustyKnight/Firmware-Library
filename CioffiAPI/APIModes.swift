@@ -47,3 +47,29 @@ public enum SatelliteServiceMode: Int {
     case switchingToVoice = 2
     case switchingToData = 3
 }
+
+public enum BroadbandDataStatus: Int {
+    case unknown = -1
+    case standardIP = 0
+    case streamingIP = 1
+    case activatingStandardIP = 2
+    case activatingStreamingIP = 3
+    case failedToActivateStandardIP = 4
+    case failedToActivateStreamingIP = 5
+    case failedToDeactivateStandardIP = 6
+    case failedToDeactivateStreamingIP = 7
+    case dataInactive = 8
+}
+
+public enum BroadbandStreamingIPSpeed: Int {
+    case kbps16 = 0
+    case kbps32 = 1
+    case kbps64 = 2
+    case kbps128 = 3
+    case kbps256 = 4
+}
+
+public enum BroadbandDataMode: Int {
+    case standardIP = 0
+    case streamingIP = 1
+}
