@@ -59,6 +59,8 @@ public enum BroadbandDataStatus: Int {
     case failedToDeactivateStandardIP = 6
     case failedToDeactivateStreamingIP = 7
     case dataInactive = 8
+    case deactivatingStandardIP = 9
+    case deactivatingStreamingIP = 10
 }
 
 public enum BroadbandStreamingIPSpeed: Int {
