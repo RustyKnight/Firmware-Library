@@ -63,7 +63,7 @@ public enum SatelliteBroadbandDataStatus: Int {
     case deactivatingStreamingIP = 10
 }
 
-public enum BroadbandStreamingIPSpeed: Int {
+public enum SatelliteBroadbandStreamingIPSpeed: Int {
     case kbps16 = 0
     case kbps32 = 1
     case kbps64 = 2

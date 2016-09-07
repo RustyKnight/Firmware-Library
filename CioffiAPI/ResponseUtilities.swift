@@ -38,11 +38,11 @@ public enum ResponseType: Int {
     case setSatelliteServiceMode = 29
     
     case startStopBroadbandData = 38
-    case getBroadbandDataStatus = 40
-    case setBroadbandDataIPMode = 32
-    case getBroadbandDataIPMode = 34
-    case setBroadbandStreamingSpeed = 36
-    case getBroadbandStreamingSpeed = 43
+    case getSatelliteBroadbandDataStatus = 40
+    case setSatelliteBroadbandDataIPMode = 32
+    case getSatelliteBroadbandDataIPMode = 34
+    case setSatelliteBroadbandStreamingSpeed = 36
+    case getSatelliteBroadbandStreamingSpeed = 43
     
     case getCellularBroadbandModeStatus = 45
     
