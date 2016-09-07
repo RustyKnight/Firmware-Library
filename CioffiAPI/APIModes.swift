@@ -75,3 +75,9 @@ public enum SatelliteBroadbandDataMode: Int {
     case standardIP = 0
     case streamingIP = 1
 }
+
+public enum CellularBroadbandDataStatus: Int {
+	case inactive = 0
+	case cellular3G
+	case cellular4G
+}
