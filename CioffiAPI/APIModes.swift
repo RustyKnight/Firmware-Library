@@ -53,7 +53,7 @@ public enum SatelliteServiceMode: Int {
 	case switchingToData = 3
 }
 
-public enum SatelliteBroadbandDataStatus: Int {
+public enum BroadbandDataModeStatus: Int {
 	case unknown = -1
 	case standardIP = 0
 	case streamingIP = 1
@@ -81,8 +81,8 @@ public enum SatelliteBroadbandDataMode: Int {
 	case streamingIP = 1
 }
 
-public enum CellularBroadbandDataStatus: Int {
-	case inactive = 0
+public enum CellularNetworkMode: Int {
+	case unknown = 0
 	case cellular3G
 	case cellular4G
 }
