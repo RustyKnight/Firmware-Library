@@ -60,6 +60,8 @@ public enum ResponseType: Int {
 
 	case getSystemTemperature = 61
 	
+	case sendSMS = 64
+	
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
 			return ResponseType.unknown
