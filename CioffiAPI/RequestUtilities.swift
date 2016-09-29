@@ -46,6 +46,10 @@ public enum RequestType: Int {
 	case getSystemTemperature = 60
 	
 	case sendSMS = 63
+	case getSMS = 65
+	case getSMSList = 67
+	case deleteSMS = 69
+	case markSMS = 71
 	
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
