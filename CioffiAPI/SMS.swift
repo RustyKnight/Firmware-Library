@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SMSStatus: Int {
+public enum SMSStatus: Int {
 	case sending = 0
 	case sent = 1
 	case sendFailed = 2
@@ -17,7 +17,7 @@ enum SMSStatus: Int {
 	case unread = 5
 }
 
-enum SMSTransport: Int {
+public enum SMSTransport: Int {
 	case satellite = 0
 	case cellular = 1
 	case unknown = 2
