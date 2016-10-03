@@ -92,6 +92,9 @@ public enum ProtocolError: Error {
 			// Calculate CRC
 			let hexCrc = Utils.hexStringFromInt(value: Int(crc))
 			let hexStr = Utils.hexStringtoAscii(hexString: hexCrc)
+			
+			log(info: "size = \(messageBody.characters.count) = \(sizeHexValue) = \(sizeValue)")
+			log(info: "crc = \(crc) = \(hexCrc) = \(hexStr)")
 			protocolMessage = getProtocolMessage(size: sizeValue, crc: hexStr, messageBody: messageBody)
 		}
 		
