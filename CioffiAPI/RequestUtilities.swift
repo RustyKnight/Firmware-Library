@@ -51,8 +51,8 @@ public enum RequestType: Int {
 	case deleteSMS = 69
 	case markSMS = 71
 	
-	case setSMSAccessRestriction = 88
-	case getSMSAccessRestriction = 91
+	case setAccessRestriction = 88
+	case getAccessRestriction = 91
 	
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
