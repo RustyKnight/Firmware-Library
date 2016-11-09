@@ -25,7 +25,7 @@ public enum NotificationType: Int {
 	case newSMS = 73
 	case smsStatus = 74
 	
-	case smsAccessRestricitionChange = 90
+	case accessRestrictionChange = 90
 }
 
 
@@ -34,7 +34,7 @@ public enum ResponseType: Int {
 	case getVersion = 2
 	case setNetworkMode = 6
 	case getNetworkMode = 7
-	case getAccessRestricitions = 9
+	case getAccessRestrictions = 9
 	case unlockAccessRestriction = 11
 	case stopAccess = 13
 	case getNetworkRegistrationStatus = 15
@@ -71,8 +71,8 @@ public enum ResponseType: Int {
 	case deleteSMS = 70
 	case markSMS = 72
 
-	case setSMSAccessResricition = 89
-	case getSMSAccessRestriction = 92
+	case setAccessRestriction = 89
+	case getAccessRestriction = 92
 	
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
