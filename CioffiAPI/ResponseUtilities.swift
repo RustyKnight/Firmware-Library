@@ -68,6 +68,8 @@ public enum ResponseType: Int {
 	case getSMSList = 68
 	case deleteSMS = 70
 	case markSMS = 72
+
+	case getSMSAccessRestriction = 92
 	
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {

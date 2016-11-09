@@ -51,6 +51,8 @@ public enum RequestType: Int {
 	case deleteSMS = 69
 	case markSMS = 71
 	
+	case getSMSAccessRestriction = 91
+	
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
 			return RequestType.unknown
