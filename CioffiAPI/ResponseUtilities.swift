@@ -24,6 +24,8 @@ public enum NotificationType: Int {
 	
 	case newSMS = 73
 	case smsStatus = 74
+	
+	case smsAccessRestricitionChange = 90
 }
 
 
@@ -69,6 +71,7 @@ public enum ResponseType: Int {
 	case deleteSMS = 70
 	case markSMS = 72
 
+	case setSMSAccessResricition = 89
 	case getSMSAccessRestriction = 92
 	
 	public static func `for`(_ value: Int) -> ResponseType {
