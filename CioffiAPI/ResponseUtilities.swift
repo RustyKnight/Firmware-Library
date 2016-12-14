@@ -27,7 +27,7 @@ public enum NotificationType: Int {
 	
 	case accessRestrictionChange = 90
 
-	case callCount = 106
+	case missedCallCount = 106
 }
 
 
