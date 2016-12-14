@@ -57,7 +57,10 @@ public enum RequestType: Int {
 	case getCallLogs = 98
 	case deleteCallLogs = 100
 	case clearCallLogs = 102
-	
+
+	case getMissedCallCount = 104
+	case clearMissedCallCount = 107
+
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
 			return RequestType.unknown
