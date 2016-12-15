@@ -64,6 +64,9 @@ public enum RequestType: Int {
 	case setOutboundFirewall = 109
 	case getOutboundFirewall = 111
 
+	case setInboundFirewall = 117
+	case getInboundFirewall = 119
+
 	case getIPAddressConfiguration = 115
 	case setIPAddressConfiguration = 113
 

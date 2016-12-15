@@ -86,6 +86,9 @@ public enum ResponseType: Int {
 	case setOutboundFirewall = 110
 	case getOutboundFirewall = 112
 
+	case setInboundFirewall = 118
+	case getInboundFirewall = 120
+
 	case getIPAddressConfiguration = 116
 	case setIPAddressConfiguration = 114
 
