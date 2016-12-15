@@ -86,6 +86,9 @@ public enum ResponseType: Int {
 	case setOutboundFirewall = 110
 	case getOutboundFirewall = 112
 
+	case getIPAddressConfiguration = 116
+	case setIPAddressConfiguration = 114
+
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
 			return ResponseType.unknown
