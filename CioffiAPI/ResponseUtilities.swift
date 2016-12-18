@@ -109,6 +109,9 @@ public enum ResponseType: Int {
 	case setEmergencyNumber = 94
 	case getEmergencyNumber = 97
 
+	case getCellularNetworkRoaming = 1001
+	case setCellularNetworkRoaming = 1003
+
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
 			return ResponseType.unknown

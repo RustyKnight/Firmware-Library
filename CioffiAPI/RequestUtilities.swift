@@ -85,6 +85,9 @@ public enum RequestType: Int {
 	case setEmergencyNumber = 93
 	case getEmergencyNumber = 96
 
+	case getCellularNetworkRoaming = 1000
+	case setCellularNetworkRoaming = 1002
+
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
 			return RequestType.unknown
