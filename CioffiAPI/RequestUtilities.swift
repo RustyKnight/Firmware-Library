@@ -88,6 +88,22 @@ public enum RequestType: Int {
 	case getCellularNetworkRoaming = 1000
 	case setCellularNetworkRoaming = 1002
 
+	case getCallStatus = 1004
+
+	case getDataUsage = 1007
+
+	case getSIMStatus = 1009
+	case setSIMPIN = 1011
+	case unlockSIM = 1013
+
+	case getGNNSSettings = 1016
+	case setGNNSSettings = 1018
+
+	case getHardwareDiagnosticInfo = 1020
+
+	case powerDown = 1022
+	case reset = 1024
+
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
 			return RequestType.unknown
