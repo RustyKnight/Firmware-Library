@@ -96,8 +96,8 @@ public enum RequestType: Int {
 	case setSIMPIN = 1011
 	case unlockSIM = 1013
 
-	case getGNNSSettings = 1016
-	case setGNNSSettings = 1018
+	case getGNSSSetting = 1016
+	case setGNSSSetting = 1018
 
 	case getHardwareDiagnosticInfo = 1020
 
