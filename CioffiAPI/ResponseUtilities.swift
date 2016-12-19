@@ -137,6 +137,8 @@ public enum ResponseType: Int {
 	case getPOSTResults = 81
 	case getRealTimeResults = 83
 
+	case getSystemAlerts = 1027
+
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
 			return ResponseType.unknown
