@@ -14,6 +14,6 @@ public protocol Responder {
 	func send(response: ResponseCode, `for`: ResponseType, contents: [String: Any]?)
 	func failed(request: RequestType, with type: ResponseCode)
 	func failed(response: ResponseType, with type: ResponseCode)
-	func accessDenied(response: ResponseType, with type: ResponseCode)
+//	func accessDenied(response: ResponseType, with type: ResponseCode)
 	func succeeded(response: ResponseType, contents: [String: Any]?)
 }
