@@ -104,6 +104,9 @@ public enum RequestType: Int {
 	case powerDown = 1022
 	case reset = 1024
 
+	case getPOSTResults = 80
+	case getRealTimeResults = 82
+
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
 			return RequestType.unknown
