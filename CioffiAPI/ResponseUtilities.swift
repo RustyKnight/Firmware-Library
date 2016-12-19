@@ -124,8 +124,8 @@ public enum ResponseType: Int {
 	case setSIMPIN = 1012
 	case unlockSIM = 1014
 
-	case getGNNSSettings = 1017
-	case setGNNSSettings = 1019
+	case getGNSSSetting = 1017
+	case setGNSSSetting = 1019
 
 	case getHardwareDiagnosticInfo = 1021
 
