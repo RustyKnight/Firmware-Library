@@ -143,6 +143,8 @@ public enum ResponseType: Int {
 
 	case getWiFiConnections = 86
 
+	case getAudibleAlertOption = 1029
+
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
 			return ResponseType.unknown
