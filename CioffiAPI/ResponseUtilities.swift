@@ -151,6 +151,8 @@ public enum ResponseType: Int {
 	case getUnreadMessageCount = 1033
 	case clearUnreadMessageCount = 1036
 
+	case getGNSSLocationInformation = 143
+
 	public static func `for`(_ value: Int) -> ResponseType {
 		guard let response = ResponseType(rawValue: value) else {
 			return ResponseType.unknown

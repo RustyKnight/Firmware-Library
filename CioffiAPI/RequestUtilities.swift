@@ -117,6 +117,8 @@ public enum RequestType: Int {
 	case getUnreadMessageCount = 1032
 	case clearUnreadMessageCount = 1035
 
+	case getGNSSLocationInformation = 142
+
 	public static func `for`(_ value: Int) -> RequestType {
 		guard let type = RequestType(rawValue: value) else {
 			return RequestType.unknown
