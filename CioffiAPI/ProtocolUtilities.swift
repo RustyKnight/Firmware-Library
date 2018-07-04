@@ -17,7 +17,7 @@ public enum ProtocolError: Error {
 	case missingRequestType
 }
 
-@objc public class ProtocolUtils: NSObject {
+public class ProtocolUtils: NSObject {
 	
 	public static let headerLength: UInt = 8
 	public static let headValue = "\(Utils.hexStringtoAscii(hexString: "A5A5"))"
@@ -68,7 +68,7 @@ public enum ProtocolError: Error {
 			headerContents += ["result": result]
 		}
 		let header: [String: Any] = ["header": headerContents]
-		log(info: "Header for type \(type) with result \(result) = \(header)")
+    log(info: "Header for type \(type) with result \(String(describing: result)) = \(header)")
 		return header
 	}
 	
@@ -82,10 +82,10 @@ public enum ProtocolError: Error {
 		var protocolMessage = ""
 		
 		// Calculate the size for the message body
-		let sizeHexValue = Utils.hexStringFromInt(value: messageBody.characters.count)
+		let sizeHexValue = Utils.hexStringFromInt(value: messageBody.count)
 		let sizeValue = Utils.hexStringtoAscii(hexString: sizeHexValue)
 		
-		log(info: "size = \(messageBody.characters.count) = \(sizeHexValue) = [\(sizeValue)]")
+		log(info: "size = \(messageBody.count) = \(sizeHexValue) = [\(sizeValue)]")
 		
 		// Base initial CRC from the default CRC
 		let crcHeader = getProtocolMessage(size: sizeValue, crc: defaultCRC, messageBody: messageBody)
@@ -221,7 +221,7 @@ public struct Utils {
 		let nsString = hexString as NSString
 		let matches = regex.matches(in: hexString, options: [], range: NSRange(location: 0, length: nsString.length))
 		let characters = matches.map {
-			Character(UnicodeScalar(UInt32(nsString.substring(with: $0.rangeAt(2)), radix: 16)!)!)
+			Character(UnicodeScalar(UInt32(nsString.substring(with: $0.range(at: 2)), radix: 16)!)!)
 		}
 		
 		return String(characters)
